@@ -108,10 +108,11 @@ test_y = xy_dict['test_y'].astype(np.float32)
 # 设置超参数
 seq_len = 30
 bs = 128
-epochs = 100
+epochs = 10
 hidden_size = 64
 num_layers = 2
-input_size = train_x.shape[-1]
+#input_size = train_x.shape[-1]
+input_size = 2
 
 # 数据打包
 train_dl, test_dl = my_dataloder(train_x, train_y, test_x, test_y, bs, shuffle=True)

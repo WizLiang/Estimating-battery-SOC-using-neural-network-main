@@ -1,7 +1,9 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+'''hidden_size = 64
+num_layers = 2
+input_size = 2'''
 
 class LsNet(nn.Module):
     """LSTM网络"""
@@ -13,9 +15,9 @@ class LsNet(nn.Module):
                            input_size = input_size,
                            num_layers = num_layers,
                            batch_first = True)
-        self.fc1 = nn.Linear(hidden_size, 64)
-        self.fc2 = nn.Linear(64, 1)
-        self.fc3 = nn.Linear(hidden_size, 1)
+        #self.fc1 = nn.Linear(hidden_size, 64)
+        #self.fc2 = nn.Linear(64, 1)
+        self.fc = nn.Linear(hidden_size, 1)
 
     def forward(self, inputs):
         h0 = torch.zeros(self.num_layers, inputs.size(0), self.hidden_size).to(inputs.device)
@@ -23,5 +25,6 @@ class LsNet(nn.Module):
         s_o, _ = self.rnn(inputs, (h0, c0))
         s_o = s_o[:, -1, :]
         #x = F.dropout(F.relu(self.fc1(s_o)))
-        x = self.fc3(s_o)
+        x = self.fc(s_o)
         return torch.squeeze(x)
+        #return x
