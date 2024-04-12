@@ -127,10 +127,6 @@ loss_fn = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 summary(model, input_size=(bs, seq_len, input_size))
 
-#vis_gragh = make_dot(model,params=dict(model.named_parameters()))
-#make_dot(model(x), params=dict(model.named_parameters()))
-
-
 # 训练
 train_loss = []
 test_loss = []
@@ -141,8 +137,6 @@ for epoch in range(epochs):
 print('Done!')
 
 # 绘图
-# 解决中文显示问题
-#plt.rcParams['font.sans-serif'] = ['PingFang']
 plt.figure(figsize=(12,4))
 plt.subplot(121)
 plt.title('train loss')
