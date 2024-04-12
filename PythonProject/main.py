@@ -109,7 +109,7 @@ test_y = xy_dict['test_y'].astype(np.float32)
 seq_len = 30
 bs = 128
 epochs = 10
-hidden_size = 64
+hidden_size = 32
 num_layers = 2
 #input_size = train_x.shape[-1]
 input_size = 2
@@ -156,7 +156,7 @@ plt.suptitle(" Model : LSTM ")
 plt.show()
 
 # 保存训练结果
-torch.save(model, save_path + 'model.pth')
+torch.save(model, save_path + 'model_32.pth')
 
 
 
