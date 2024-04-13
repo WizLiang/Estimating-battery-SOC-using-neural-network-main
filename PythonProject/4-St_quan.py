@@ -43,18 +43,50 @@ model_path = save_path + 'model_pruning_Trained_32.pth'
 model = torch.load(model_path)
 model.eval()
 
-# 应用动态量化
-model_quantized = quantize_dynamic(
-    model,  # 要量化的模型
-    {nn.LSTM, nn.Linear},  # 指定要量化的模块类型
-    dtype=torch.qint8  # 指定量化到的数据类型
-)
+
+
+def Q(a, levels=32):  # 默认级别提高到32
+    a = a.to('cpu')
+    b = a.detach().numpy()
+    b = np.clip(b, -0.875, 0.875)  # 可以根据具体情况调整裁剪阈值
+    b = np.round(b * levels + 0.5) / levels  # 调整量化级别
+    a.data = torch.from_numpy(b).data
+    return a
+
+#0.03303659606906699 -0.875, 0.875
+
+
+'''
+def Q(a, levels=32):
+    a = a.to('cpu')
+    b = a.detach().numpy()
+    min_b, max_b = b.min(), b.max()
+    print("Min value:", min_b, "Max value:", max_b)
+    # 动态调整范围到最小/最大值
+    b = np.clip(b, min_b, max_b)
+    range_b = max_b - min_b
+    scale = levels / range_b
+    b = np.round((b - min_b) * scale) / scale + min_b  # 重新映射到原始的最小值和最大值
+    a.data = torch.from_numpy(b).data
+    return a
+'''
+
+def apply_quantization_to_model(model):
+    with torch.no_grad():  # 确保不计算梯度
+        for name, param in model.named_parameters():
+            quantized_param = Q(param)  # 应用量化函数
+            param.data.copy_(quantized_param.data)  # 替换原始参数数据
+
+# 假设 model 已经定义
+apply_quantization_to_model(model)
+
+
 
 
 
 '''保存，测试量化模型'''
 # 保存量化模型
-torch.save(model_quantized.state_dict(), save_path + 'model_quantized.pth')
+torch.save(model, save_path + 'model_quantized.pth')
 
 # 测试量化模型性能的函数
 def test_model(model, dataloader):
@@ -71,8 +103,12 @@ def test_model(model, dataloader):
 
 
 test_loss = test_model(model, test_dl)
-print(f"Test Loss before quantization: {test_loss}")
+print(f"Test Loss After quantization: {test_loss}")
 
-test_loss = test_model(model_quantized, test_dl)
-print(f"Test Loss after quantization: {test_loss}")
+
+
+
+
+
+
 

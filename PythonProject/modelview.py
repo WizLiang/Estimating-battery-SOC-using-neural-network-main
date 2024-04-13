@@ -17,7 +17,7 @@ num_layers = 2
 input_size = 2
 
 
-model = torch.load(save_path + 'model_32.pth')
+model = torch.load(save_path + 'model_quantized.pth')
 
 # 将模型设置为评估模式
 model.eval()
@@ -38,4 +38,4 @@ output = model(dummy_input)
 vis_graph = make_dot(output, params=dict(model.named_parameters()))
 
 # 渲染图表并保存为PDF或PNG
-vis_graph.render('model_32_structure', format='png')
+vis_graph.render('model_quantized', format='png')
