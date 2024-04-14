@@ -55,19 +55,6 @@ data_dict4 = split(data4, seq_len=seq_len)
 data_dict5 = split(data5, seq_len=seq_len)
 
 # 合并数据
-"""以下是 numpy.concatenate 函数的基本语法：
-
-python
-Copy code
-numpy.concatenate((array1, array2, ...), axis=0, out=None)
-array1, array2, ...：要连接的数组序列。
-axis：指定连接的轴。默认是 0，表示在第一个轴上连接。如果是 1，则在第二个轴上连接，以此类推。
-out：可选参数，如果指定，结果将存储在此数组中。
-在你的代码中，你使用了 (data_dict1[key], data_dict2[key], data_dict3[key], data_dict4[key], data_dict5[key]) 作为 numpy.concatenate 的第一个参数，这是一个包含五个数组的元组，表示要连接的五个不同数据源的子序列。
-
-你设置 axis=0，表示沿着第一个轴（垂直方向）进行连接。最后，将连接的结果存储在 data_dict[key] 中，其中 key 对应每个数据源的相同键。
-
-"""
 data_dict = {}
 for key in data_dict1.keys():
     data_dict[key] = np.concatenate((data_dict1[key], data_dict2[key], \
