@@ -54,7 +54,7 @@ train_dl, test_dl = my_dataloder(train_x, train_y, test_x, test_y, bs, shuffle=T
 #选择要使用的模型 
 #model = LsNet(hidden_size, input_size, num_layers)
 
-model = torch.load(save_path + 'model_32.pth')
+model = torch.load(save_path + 'model.pth')
 
 
 
