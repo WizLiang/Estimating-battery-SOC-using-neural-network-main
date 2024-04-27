@@ -1,6 +1,6 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module matrix_mult0
-ERROR: [VRFC 10-3642] port 'A' must not be declared to be an array [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:29]
-ERROR: [VRFC 10-3642] port 'B' must not be declared to be an array [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:30]
-ERROR: [VRFC 10-3642] port 'C' must not be declared to be an array [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:31]
-ERROR: [VRFC 10-2865] module 'matrix_mult0' ignored due to previous errors [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:25]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_multiply.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_multiply
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/matrix_multiply_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrix_multiply_tb

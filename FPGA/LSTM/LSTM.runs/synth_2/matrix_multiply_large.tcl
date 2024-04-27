@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7k160tfbg676-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -28,9 +30,17 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+add_files D:/Desktop/Estimating-battery-SOC-using-neural-network-main/save/coe/lstm_weight_ih_l0.coe
+add_files D:/Desktop/Estimating-battery-SOC-using-neural-network-main/save/coe/lstm_weight_ih_l1.coe
+add_files D:/Desktop/Estimating-battery-SOC-using-neural-network-main/save/coe/lstm_weight_hh_l0.coe
+add_files D:/Desktop/Estimating-battery-SOC-using-neural-network-main/save/coe/lstm_weight_hh_l1.coe
+add_files D:/Desktop/Estimating-battery-SOC-using-neural-network-main/save/coe/lstm_bias_ih_l1.coe
+add_files D:/Desktop/Estimating-battery-SOC-using-neural-network-main/save/coe/lstm_bias_ih_l0.coe
+add_files D:/Desktop/Estimating-battery-SOC-using-neural-network-main/save/coe/lstm_bias_hh_l0.coe
+add_files D:/Desktop/Estimating-battery-SOC-using-neural-network-main/save/coe/lstm_bias_hh_l1.coe
 read_verilog -library xil_defaultlib {
   D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v
-  D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v
+  D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -43,12 +53,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top matrix_mult0 -part xc7k160tfbg676-1
+synth_design -top matrix_multiply_large -part xc7k160tfbg676-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef matrix_mult0.dcp
-create_report "synth_2_synth_report_utilization_0" "report_utilization -file matrix_mult0_utilization_synth.rpt -pb matrix_mult0_utilization_synth.pb"
+write_checkpoint -force -noxdef matrix_multiply_large.dcp
+create_report "synth_2_synth_report_utilization_0" "report_utilization -file matrix_multiply_large_utilization_synth.rpt -pb matrix_multiply_large_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

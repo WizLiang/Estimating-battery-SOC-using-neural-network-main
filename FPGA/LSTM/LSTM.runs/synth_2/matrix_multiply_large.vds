@@ -1,0 +1,691 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Apr 27 23:53:21 2024
+# Process ID: 17668
+# Current directory: D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2
+# Command line: vivado.exe -log matrix_multiply_large.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrix_multiply_large.tcl
+# Log file: D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2/matrix_multiply_large.vds
+# Journal file: D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source matrix_multiply_large.tcl -notrace
+Command: synth_design -top matrix_multiply_large -part xc7k160tfbg676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12952 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 687.215 ; gain = 236.449
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'matrix_multiply_large' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:22]
+	Parameter WIDTH bound to: 8 - type: integer 
+	Parameter A_WIDTH bound to: 256 - type: integer 
+	Parameter B_WIDTH bound to: 8 - type: integer 
+	Parameter TOTAL_ELEMENTS_A bound to: 1024 - type: integer 
+	Parameter TOTAL_ELEMENTS_B bound to: 32 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter COMPUTE bound to: 1 - type: integer 
+	Parameter FINISH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mux' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:23]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux' (1#1) [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:95]
+WARNING: [Synth 8-5856] 3D RAM A_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-5788] Register i_reg in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:99]
+WARNING: [Synth 8-5788] Register sum_reg[0] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[1] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[2] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[3] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[4] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[5] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[6] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[7] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[8] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[9] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[10] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[11] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[12] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[13] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[14] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[15] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[16] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[17] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[18] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[19] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[20] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[21] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[22] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[23] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[24] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[25] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[26] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[27] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[28] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[29] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[30] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register sum_reg[31] in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:105]
+WARNING: [Synth 8-5788] Register C_flat_reg in module matrix_multiply_large is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:109]
+WARNING: [Synth 8-3848] Net A[1][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[2][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[3][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[4][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[5][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[6][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[7][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[8][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[9][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[10][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[11][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[12][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[13][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[14][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[15][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[16][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[17][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[18][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[19][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[20][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[21][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[22][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[23][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[24][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[25][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[26][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[27][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[28][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[29][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[30][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[31][0] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[1][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[2][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[3][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[4][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[5][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[6][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[7][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[8][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[9][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[10][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[11][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[12][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[13][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[14][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[15][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[16][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[17][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[18][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[19][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[20][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[21][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[22][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[23][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[24][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[25][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[26][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[27][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[28][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[29][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[30][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[31][1] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[1][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[2][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[3][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[4][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[5][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[6][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[7][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[8][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[9][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[10][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[11][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[12][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[13][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[14][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[15][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[16][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[17][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[18][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[19][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[20][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[21][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[22][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[23][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[24][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[25][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[26][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[27][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[28][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[29][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[30][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[31][2] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[1][3] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[2][3] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[3][3] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[4][3] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[5][3] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[6][3] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+WARNING: [Synth 8-3848] Net A[7][3] in module/entity matrix_multiply_large does not have driver. [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:40]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'matrix_multiply_large' (2#1) [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:22]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8191]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8190]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8189]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8188]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8187]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8186]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8185]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8184]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8183]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8182]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8181]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8180]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8179]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8178]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8177]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8176]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8175]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8174]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8173]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8172]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8171]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8170]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8169]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8168]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8167]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8166]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8165]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8164]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8163]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8162]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8161]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8160]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8159]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8158]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8157]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8156]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8155]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8154]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8153]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8152]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8151]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8150]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8149]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8148]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8147]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8146]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8145]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8144]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8143]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8142]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8141]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8140]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8139]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8138]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8137]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8136]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8135]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8134]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8133]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8132]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8131]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8130]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8129]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8128]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8127]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8126]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8125]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8124]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8123]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8122]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8121]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8120]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8119]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8118]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8117]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8116]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8115]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8114]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8113]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8112]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8111]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8110]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8109]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8108]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8107]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8106]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8105]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8104]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8103]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8102]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8101]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8100]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8099]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8098]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8097]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8096]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8095]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8094]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8093]
+WARNING: [Synth 8-3331] design matrix_multiply_large has unconnected port A_flat[8092]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 798.742 ; gain = 347.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 798.742 ; gain = 347.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 798.742 ; gain = 347.977
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg676-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matrix_multiply_large'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                 COMPUTE |                               01 |                               01
+                  FINISH |                               10 |                               10
+                  iSTATE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matrix_multiply_large'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 991.074 ; gain = 540.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[2].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[3].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[4].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[5].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[6].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[7].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[8].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[9].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[10].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[11].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[12].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[13].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[14].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[15].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[16].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[17].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[18].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[19].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[20].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[21].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[22].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[23].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[24].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[25].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[26].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[27].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[28].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[29].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[30].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[0].mult' (mux) to 'row_mult[31].col_mult[0].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[2].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[3].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[4].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[5].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[6].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[7].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[8].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[9].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[10].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[11].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[12].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[13].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[14].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[15].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[16].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[17].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[18].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[19].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[20].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[21].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[22].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[23].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[24].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[25].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[26].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[27].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[28].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[29].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[30].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[1].mult' (mux) to 'row_mult[31].col_mult[1].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[2].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[3].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[4].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[5].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[6].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[7].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[8].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[9].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[10].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[11].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[12].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[13].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[14].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[15].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[16].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[17].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[18].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[19].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[20].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[21].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[22].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[23].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[24].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[25].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[26].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[27].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[28].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[29].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[30].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[2].mult' (mux) to 'row_mult[31].col_mult[2].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[2].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[3].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[4].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[5].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[6].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[7].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[8].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[9].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[10].col_mult[3].mult'
+INFO: [Synth 8-223] decloning instance 'row_mult[1].col_mult[3].mult' (mux) to 'row_mult[11].col_mult[3].mult'
+INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report RTL Partitions: 
++------+---------------------------+------------+----------+
+|      |RTL Partition              |Replication |Instances |
++------+---------------------------+------------+----------+
+|1     |matrix_multiply_large__GB0 |           1|     46793|
+|2     |matrix_multiply_large__GB1 |           1|     28177|
+|3     |matrix_multiply_large__GB2 |           1|     12939|
++------+---------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 32    
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	              256 Bit    Registers := 1     
+	               16 Bit    Registers := 32    
+	                8 Bit    Registers := 64    
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 2     
+	   4 Input    256 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1056  
+	   2 Input      6 Bit        Muxes := 7     
+	   4 Input      6 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module matrix_multiply_large 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 32    
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	              256 Bit    Registers := 1     
+	               16 Bit    Registers := 32    
+	                8 Bit    Registers := 64    
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 2     
+	   4 Input    256 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1056  
+	   2 Input      6 Bit        Muxes := 7     
+	   4 Input      6 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_reg[3]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_reg[1]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_reg[2]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_reg[0]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_reg[5]_LDC )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\i_reg[4]_LDC )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:50 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------------------+------------+----------+
+|      |RTL Partition              |Replication |Instances |
++------+---------------------------+------------+----------+
+|1     |matrix_multiply_large__GB0 |           1|     43314|
+|2     |matrix_multiply_large__GB1 |           1|     21270|
+|3     |matrix_multiply_large__GB2 |           1|      9830|
++------+---------------------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:51 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------------------+------------+----------+
+|      |RTL Partition              |Replication |Instances |
++------+---------------------------+------------+----------+
+|1     |matrix_multiply_large__GB0 |           1|     43314|
+|2     |matrix_multiply_large__GB1 |           1|     21270|
+|3     |matrix_multiply_large__GB2 |           1|      9830|
++------+---------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:02:01 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[4] with 1st driver pin 'C_flat[255]_i_3/O' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[4] with 2nd driver pin 'i_reg[4]_P/Q' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:99]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[3] with 1st driver pin 'C_flat[255]_i_5/O' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[3] with 2nd driver pin 'i_reg[3]_P/Q' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:99]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[2] with 1st driver pin 'C_flat[255]_i_8/O' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[2] with 2nd driver pin 'i_reg[2]_P/Q' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:99]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[1] with 1st driver pin 'sum[1][7]_i_3/O' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[1] with 2nd driver pin 'i_reg[1]_P/Q' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:99]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[5] with 1st driver pin 'FSM_sequential_state[1]_i_3/O' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[5] with 2nd driver pin 'i_reg[5]_P/Q' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:99]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[0] with 1st driver pin 'C_flat[255]_i_7/O' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:34]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i[0] with 2nd driver pin 'i_reg[0]_P/Q' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mutiply_large.v:99]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        6|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   448|
+|3     |LUT1   |     2|
+|4     |LUT2   |   888|
+|5     |LUT3   |   555|
+|6     |LUT4   |   778|
+|7     |LUT5   |   406|
+|8     |LUT6   |  5600|
+|9     |MUXF7  |  2064|
+|10    |MUXF8  |   624|
+|11    |FDCE   |   515|
+|12    |FDRE   |   518|
+|13    |IBUF   |   515|
+|14    |OBUF   |   257|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------+-------+------+
+|      |Instance                          |Module |Cells |
++------+----------------------------------+-------+------+
+|1     |top                               |       | 13171|
+|2     |  \row_mult[0].col_mult[0].mult   |mux    |   114|
+|3     |  \row_mult[0].col_mult[10].mult  |mux_0  |    96|
+|4     |  \row_mult[0].col_mult[11].mult  |mux_1  |   114|
+|5     |  \row_mult[0].col_mult[12].mult  |mux_2  |   114|
+|6     |  \row_mult[0].col_mult[13].mult  |mux_3  |   324|
+|7     |  \row_mult[0].col_mult[14].mult  |mux_4  |    96|
+|8     |  \row_mult[0].col_mult[15].mult  |mux_5  |   114|
+|9     |  \row_mult[0].col_mult[16].mult  |mux_6  |   114|
+|10    |  \row_mult[0].col_mult[17].mult  |mux_7  |   114|
+|11    |  \row_mult[0].col_mult[18].mult  |mux_8  |   114|
+|12    |  \row_mult[0].col_mult[19].mult  |mux_9  |   106|
+|13    |  \row_mult[0].col_mult[1].mult   |mux_10 |   106|
+|14    |  \row_mult[0].col_mult[20].mult  |mux_11 |   114|
+|15    |  \row_mult[0].col_mult[21].mult  |mux_12 |   114|
+|16    |  \row_mult[0].col_mult[22].mult  |mux_13 |   114|
+|17    |  \row_mult[0].col_mult[23].mult  |mux_14 |   114|
+|18    |  \row_mult[0].col_mult[24].mult  |mux_15 |   114|
+|19    |  \row_mult[0].col_mult[25].mult  |mux_16 |   114|
+|20    |  \row_mult[0].col_mult[26].mult  |mux_17 |   106|
+|21    |  \row_mult[0].col_mult[27].mult  |mux_18 |   106|
+|22    |  \row_mult[0].col_mult[28].mult  |mux_19 |   114|
+|23    |  \row_mult[0].col_mult[29].mult  |mux_20 |   114|
+|24    |  \row_mult[0].col_mult[2].mult   |mux_21 |   114|
+|25    |  \row_mult[0].col_mult[30].mult  |mux_22 |   114|
+|26    |  \row_mult[0].col_mult[31].mult  |mux_23 |   106|
+|27    |  \row_mult[0].col_mult[3].mult   |mux_24 |   106|
+|28    |  \row_mult[0].col_mult[4].mult   |mux_25 |   322|
+|29    |  \row_mult[0].col_mult[5].mult   |mux_26 |   106|
+|30    |  \row_mult[0].col_mult[6].mult   |mux_27 |   194|
+|31    |  \row_mult[0].col_mult[7].mult   |mux_28 |   106|
+|32    |  \row_mult[0].col_mult[8].mult   |mux_29 |   114|
+|33    |  \row_mult[0].col_mult[9].mult   |mux_30 |   220|
++------+----------------------------------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 12 critical warnings and 16899 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:02:08 . Memory (MB): peak = 1464.914 ; gain = 1014.148
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.222 . Memory (MB): peak = 1464.914 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3136 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1464.914 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+125 Infos, 235 Warnings, 12 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:02:19 . Memory (MB): peak = 1464.914 ; gain = 1038.984
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1464.914 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2/matrix_multiply_large.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file matrix_multiply_large_utilization_synth.rpt -pb matrix_multiply_large_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 27 23:55:50 2024...

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7k160tfbg676-1" LaunchTime="1714142894">
-  <File Type="PA-TCL" Name="matrix_mult0.tcl"/>
-  <File Type="REPORTS-TCL" Name="matrix_mult0_reports.tcl"/>
-  <File Type="RDS-RDS" Name="matrix_mult0.vds"/>
-  <File Type="RDS-UTIL" Name="matrix_mult0_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="matrix_mult0_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="matrix_mult0.dcp"/>
+<GenRun Id="synth_2" LaunchPart="xc7k160tfbg676-1" LaunchTime="1714233198">
+  <File Type="PA-TCL" Name="matrix_multiply_large.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="matrix_multiply_large_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="matrix_multiply_large_reports.tcl"/>
+  <File Type="RDS-RDS" Name="matrix_multiply_large.vds"/>
+  <File Type="RDS-UTIL" Name="matrix_multiply_large_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="matrix_multiply_large_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="matrix_multiply_large.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="matrix_multiply_large_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="matrix_multiply_large_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/mux.v">
@@ -15,8 +18,24 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/matrix_mutiply_large.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/matrix_multiply.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/matrix_mult0.v">
       <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -30,10 +49,57 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../save/coe/lstm_weight_ih_l0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../save/coe/lstm_weight_ih_l1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../save/coe/lstm_weight_hh_l0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../save/coe/lstm_weight_hh_l1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../save/coe/lstm_bias_ih_l1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../save/coe/lstm_bias_ih_l0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../save/coe/lstm_bias_hh_l0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../save/coe/lstm_bias_hh_l1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="matrix_mult0"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="matrix_multiply_large"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -49,7 +115,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -1,0 +1,4 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Output C_flat: 4020402040204020402040204020402040204020402040204020402040204020
+$finish called at time : 515 ns : File "D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/matrix_multiply_tb.v" Line 88

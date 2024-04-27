@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log matrix_mult0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrix_mult0.tcl
+EAStep vivado -log matrix_multiply_large.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrix_multiply_large.tcl
