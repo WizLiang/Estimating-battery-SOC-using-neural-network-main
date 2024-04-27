@@ -1,0 +1,375 @@
+
+*** Running vivado
+    with args -log matrix_mult0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrix_mult0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source matrix_mult0.tcl -notrace
+Command: synth_design -top matrix_mult0 -part xc7k160tfbg676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17344 
+WARNING: [Synth 8-2539] port A must not be declared to be an array [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:29]
+WARNING: [Synth 8-2539] port B must not be declared to be an array [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:30]
+WARNING: [Synth 8-2539] port C must not be declared to be an array [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:31]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 691.426 ; gain = 240.613
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'matrix_mult0' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:25]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter COMPUTE bound to: 1 - type: integer 
+	Parameter FINISH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mux' [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:23]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux' (1#1) [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:64]
+WARNING: [Synth 8-5788] Register C_reg[0] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[1] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[2] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[3] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[4] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[5] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[6] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[7] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[8] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[9] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[10] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[11] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[12] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[13] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[14] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[15] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[16] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[17] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[18] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[19] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[20] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[21] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[22] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[23] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[24] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[25] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[26] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[27] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[28] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[29] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[30] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+WARNING: [Synth 8-5788] Register C_reg[31] in module matrix_mult0 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_mult0' (2#1) [D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_mult0.v:25]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 740.816 ; gain = 290.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 740.816 ; gain = 290.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tfbg676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 740.816 ; gain = 290.004
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k160tfbg676-1
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'matrix_mult0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                 COMPUTE |                               01 |                               01
+                  FINISH |                               10 |                               10
+                  iSTATE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'matrix_mult0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 740.816 ; gain = 290.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 32    
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      6 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 32    
+	   4 Input      1 Bit        Muxes := 35    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module matrix_mult0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 32    
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      6 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 32    
+	   4 Input      1 Bit        Muxes := 35    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1020.090 ; gain = 569.277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1020.090 ; gain = 569.277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1020.090 ; gain = 569.277
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 1026.973 ; gain = 576.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 1026.973 ; gain = 576.160
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:36 . Memory (MB): peak = 1026.973 ; gain = 576.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 1026.973 ; gain = 576.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 1026.973 ; gain = 576.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 1026.973 ; gain = 576.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   770|
+|3     |LUT1   |     2|
+|4     |LUT2   |  1538|
+|5     |LUT3   |   391|
+|6     |LUT4   |  1568|
+|7     |LUT5   |   394|
+|8     |LUT6   |  1832|
+|9     |MUXF7  |    64|
+|10    |MUXF8  |    32|
+|11    |FDCE   |     9|
+|12    |FDRE   |   256|
+|13    |IBUF   |   531|
+|14    |OBUF   |   257|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------+-------+------+
+|      |Instance                          |Module |Cells |
++------+----------------------------------+-------+------+
+|1     |top                               |       |  7645|
+|2     |  \mult_loop[0].genblk1[0].mult   |mux    |    98|
+|3     |  \mult_loop[0].genblk1[10].mult  |mux_0  |    98|
+|4     |  \mult_loop[0].genblk1[11].mult  |mux_1  |   114|
+|5     |  \mult_loop[0].genblk1[12].mult  |mux_2  |    98|
+|6     |  \mult_loop[0].genblk1[13].mult  |mux_3  |    98|
+|7     |  \mult_loop[0].genblk1[14].mult  |mux_4  |    98|
+|8     |  \mult_loop[0].genblk1[15].mult  |mux_5  |   106|
+|9     |  \mult_loop[0].genblk1[16].mult  |mux_6  |    98|
+|10    |  \mult_loop[0].genblk1[17].mult  |mux_7  |    98|
+|11    |  \mult_loop[0].genblk1[18].mult  |mux_8  |    98|
+|12    |  \mult_loop[0].genblk1[19].mult  |mux_9  |   122|
+|13    |  \mult_loop[0].genblk1[1].mult   |mux_10 |    98|
+|14    |  \mult_loop[0].genblk1[20].mult  |mux_11 |    98|
+|15    |  \mult_loop[0].genblk1[21].mult  |mux_12 |    98|
+|16    |  \mult_loop[0].genblk1[22].mult  |mux_13 |    98|
+|17    |  \mult_loop[0].genblk1[23].mult  |mux_14 |   106|
+|18    |  \mult_loop[0].genblk1[24].mult  |mux_15 |    98|
+|19    |  \mult_loop[0].genblk1[25].mult  |mux_16 |    98|
+|20    |  \mult_loop[0].genblk1[26].mult  |mux_17 |    98|
+|21    |  \mult_loop[0].genblk1[27].mult  |mux_18 |   123|
+|22    |  \mult_loop[0].genblk1[28].mult  |mux_19 |    98|
+|23    |  \mult_loop[0].genblk1[29].mult  |mux_20 |    98|
+|24    |  \mult_loop[0].genblk1[2].mult   |mux_21 |    98|
+|25    |  \mult_loop[0].genblk1[30].mult  |mux_22 |    98|
+|26    |  \mult_loop[0].genblk1[31].mult  |mux_23 |   106|
+|27    |  \mult_loop[0].genblk1[3].mult   |mux_24 |   130|
+|28    |  \mult_loop[0].genblk1[4].mult   |mux_25 |    98|
+|29    |  \mult_loop[0].genblk1[5].mult   |mux_26 |    98|
+|30    |  \mult_loop[0].genblk1[6].mult   |mux_27 |    98|
+|31    |  \mult_loop[0].genblk1[7].mult   |mux_28 |   106|
+|32    |  \mult_loop[0].genblk1[8].mult   |mux_29 |    98|
+|33    |  \mult_loop[0].genblk1[9].mult   |mux_30 |    98|
+|34    |  \mult_loop[1].genblk1[0].mult   |mux_31 |    98|
+|35    |  \mult_loop[1].genblk1[10].mult  |mux_32 |    98|
+|36    |  \mult_loop[1].genblk1[11].mult  |mux_33 |   114|
+|37    |  \mult_loop[1].genblk1[12].mult  |mux_34 |    98|
+|38    |  \mult_loop[1].genblk1[13].mult  |mux_35 |    98|
+|39    |  \mult_loop[1].genblk1[14].mult  |mux_36 |    98|
+|40    |  \mult_loop[1].genblk1[15].mult  |mux_37 |   106|
+|41    |  \mult_loop[1].genblk1[16].mult  |mux_38 |    98|
+|42    |  \mult_loop[1].genblk1[17].mult  |mux_39 |    98|
+|43    |  \mult_loop[1].genblk1[18].mult  |mux_40 |    98|
+|44    |  \mult_loop[1].genblk1[19].mult  |mux_41 |   122|
+|45    |  \mult_loop[1].genblk1[1].mult   |mux_42 |    98|
+|46    |  \mult_loop[1].genblk1[20].mult  |mux_43 |    98|
+|47    |  \mult_loop[1].genblk1[21].mult  |mux_44 |    98|
+|48    |  \mult_loop[1].genblk1[22].mult  |mux_45 |    98|
+|49    |  \mult_loop[1].genblk1[23].mult  |mux_46 |   106|
+|50    |  \mult_loop[1].genblk1[24].mult  |mux_47 |    98|
+|51    |  \mult_loop[1].genblk1[25].mult  |mux_48 |    98|
+|52    |  \mult_loop[1].genblk1[26].mult  |mux_49 |    98|
+|53    |  \mult_loop[1].genblk1[27].mult  |mux_50 |   114|
+|54    |  \mult_loop[1].genblk1[28].mult  |mux_51 |    98|
+|55    |  \mult_loop[1].genblk1[29].mult  |mux_52 |    98|
+|56    |  \mult_loop[1].genblk1[2].mult   |mux_53 |    98|
+|57    |  \mult_loop[1].genblk1[30].mult  |mux_54 |    98|
+|58    |  \mult_loop[1].genblk1[31].mult  |mux_55 |   106|
+|59    |  \mult_loop[1].genblk1[3].mult   |mux_56 |   122|
+|60    |  \mult_loop[1].genblk1[4].mult   |mux_57 |    98|
+|61    |  \mult_loop[1].genblk1[5].mult   |mux_58 |    98|
+|62    |  \mult_loop[1].genblk1[6].mult   |mux_59 |    98|
+|63    |  \mult_loop[1].genblk1[7].mult   |mux_60 |   106|
+|64    |  \mult_loop[1].genblk1[8].mult   |mux_61 |    98|
+|65    |  \mult_loop[1].genblk1[9].mult   |mux_62 |    98|
++------+----------------------------------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 1026.973 ; gain = 576.160
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 1026.973 ; gain = 576.160
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 1026.973 ; gain = 576.160
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.145 . Memory (MB): peak = 1039.215 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 866 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1075.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+16 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:46 . Memory (MB): peak = 1075.426 ; gain = 649.484
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1075.426 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2/matrix_mult0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file matrix_mult0_utilization_synth.rpt -pb matrix_mult0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 26 22:49:12 2024...
