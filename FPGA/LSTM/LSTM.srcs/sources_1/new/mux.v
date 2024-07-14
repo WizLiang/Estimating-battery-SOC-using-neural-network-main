@@ -25,7 +25,7 @@ module mux#(
 )(
     input [DATA_WIDTH -1 :0] a,  // 输入a，1.0.7格式
     input [DATA_WIDTH -1:0] b,  // 输入b，1.0.7格式
-    output reg [DATA_WIDTH -1:0] result  // 输出结果，1.0.7格式
+    output reg [15 :0] result  // 输出结果，1.1.14格式
 );
 
 wire signed [2*DATA_WIDTH -1:0] mult_raw;  // 扩展位宽以存储乘法原始结果
@@ -35,8 +35,7 @@ assign mult_raw = $signed(a) * $signed(b);
 
 // 格式化结果：取14位小数的前7位（舍入可在这里添加）
 always @(mult_raw) begin
-    // 将14位小数右移7位，并保持符号位
-    result = mult_raw[14:7];  // 从索引14到7，选择中间的8位
+    result = {mult_raw[14],1'd0,mult_raw[13:0]};  
 end
 
 endmodule

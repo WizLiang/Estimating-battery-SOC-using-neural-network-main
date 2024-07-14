@@ -19,6 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+`timescale 1ns / 1ps
+
 module matrix_multiply_large(
     input wire clk,
     input wire rst_n,
@@ -29,66 +31,58 @@ module matrix_multiply_large(
     output reg done
 );
 
-// Parameters for indexing
-localparam WIDTH = 8;
-localparam A_WIDTH = 32 * WIDTH;
-localparam B_WIDTH = WIDTH;
-localparam TOTAL_ELEMENTS_A = 32 * 32;
-localparam TOTAL_ELEMENTS_B = 32;
-
-// Internal register arrays
-reg [7:0] A[0:31][0:31];
-reg [7:0] B[0:31];
+// Internal signal definitions
+reg [7:0] A[0:31][0:31];  // Two-dimensional reg array for matrix A
+reg [7:0] B[0:31];        // One-dimensional reg array for vector B
 wire [7:0] products[0:31][0:31];
-reg [15:0] sum[0:31];
-
-// Control signals
-reg [5:0] i, j;
+reg [5:0] row, col;
 reg [1:0] state;
 localparam IDLE = 0, COMPUTE = 1, FINISH = 2;
 
-// Generate multipliers for each row of matrix A and vector B
-genvar row, col;
+// Generate multipliers for each element multiplication
+genvar i, j;
 generate
-    for (row = 0; row < 32; row = row + 1) begin : row_mult
-        for (col = 0; col < 32; col = col + 1) begin : col_mult
-            mux mult(
-                .a(A[row][col]),
-                .b(B[col]),
-                .result(products[row][col])
+    for (i = 0; i < 32; i = i + 1) begin : row_loop
+        for (j = 0; j < 32; j = j + 1) begin : col_loop
+             mux mult(
+                .a(A[i][j]),
+                .b(B[j]),
+                .result(products[i][j])
             );
         end
     end
 endgenerate
 
-// Map flattened input to two-dimensional reg array and one-dimensional reg array
+// Map flattened input to two-dimensional reg array
+integer k, l;
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
-        for (i = 0; i < 32; i = i + 1) begin
-            for (j = 0; j < 32; j = j + 1) begin
-                A[i][j] <= 0;
+        for (k = 0; k < 32; k = k + 1) begin
+            for (l = 0; l < 32; l = l + 1) begin
+                A[k][l] <= 0;
+            end
         end
-        for (i = 0; i < 32; i = i + 1) begin
-            B[i] <= 0;
-        end
+        for (l = 0; l < 32; l = l + 1) begin
+            B[l] <= 0;
         end
     end
     else if (ena) begin
-        for (i = 0; i < 32; i = i + 1) begin
-            for (j = 0; j < 32; j = j + 1) begin
-                A[i][j] <= A_flat[(i * 32 + j) * WIDTH +: WIDTH];
+        for (k = 0; k < 32; k = k + 1) begin
+            for (l = 0; l < 32; l = l + 1) begin
+                A[k][l] <= A_flat[(k*32+l)*8 +: 8];
+            end
         end
-        for (i = 0; i < 32; i = i + 1) begin
-            B[i] <= B_flat[i * WIDTH +: WIDTH];
-        end
+        for (l = 0; l < 32; l = l + 1) begin
+            B[l] <= B_flat[l*8 +: 8];
         end
     end
-end    
+end
 
 // State Machine for controlling matrix multiplication
 always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
         state <= IDLE;
+        row <= 0;
         done <= 0;
     end
     else begin
@@ -96,18 +90,17 @@ always @(posedge clk or negedge rst_n) begin
             IDLE: begin
                 if (ena) begin
                     state <= COMPUTE;
-                    i <= 0;
+                    row <= 0;
                 end
                 done <= 0;
             end
             COMPUTE: begin
-                if (i < 32) begin
-                    sum[i] = 0; // Reset sum for current row
-                    for (j = 0; j < 32; j = j + 1) begin
-                        sum[i] = sum[i] + products[i][j];
+                if (row < 32) begin
+                    C_flat[row*8 +: 8] <= 0;  // Initialize sum
+                    for (col = 0; col < 32; col = col + 1) begin
+                        C_flat[row*8 +: 8] <= C_flat[row*8 +: 8] + products[row][col];
                     end
-                    C_flat[i*WIDTH +: WIDTH] = sum[i][7:0]; // Assuming sum fits within 8 bits
-                    i = i + 1;
+                    row <= row + 1;
                 end
                 else begin
                     state <= FINISH;

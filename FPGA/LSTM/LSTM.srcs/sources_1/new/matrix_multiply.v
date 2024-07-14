@@ -26,14 +26,14 @@ module matrix_multiply(
     input wire ena,
     input wire [511:0] A_flat,  // 32x2 matrix flattened to 1D array (32*2*8)
     input wire [15:0] B_flat,   // 2x1 vector flattened to 1D array (2*8)
-    output reg [255:0] C_flat,  // 32x1 result matrix flattened (32*8)
+    output reg [511:0] C_flat,  // 32x1 result matrix flattened (32*16)
     output reg done
 );
 
 // Internal signal definitions
 reg [7:0] A[0:31][0:1];  // Two-dimensional reg array for matrix A
 reg [7:0] B[0:1];        // One-dimensional reg array for vector B
-wire [7:0] products[0:31][0:1];
+wire [15:0] products[0:31][0:1];
 reg [5:0] index;
 reg [1:0] state;
 localparam IDLE = 0, COMPUTE = 1, FINISH = 2;
@@ -95,7 +95,7 @@ always @(posedge clk, negedge rst_n) begin
             end
             COMPUTE: begin
                 if (index < 32) begin
-                    C_flat[index*8 +: 8] <= products[index][0] + products[index][1];
+                    C_flat[index*16 +: 16] <= products[index][0] + products[index][1];
                     index <= index + 1;
                 end
                 else begin
@@ -104,9 +104,7 @@ always @(posedge clk, negedge rst_n) begin
             end
             FINISH: begin
                 done <= 1;
-                if (!ena) begin
-                    state <= IDLE;
-                end
+                state <= IDLE;
             end
         endcase
     end

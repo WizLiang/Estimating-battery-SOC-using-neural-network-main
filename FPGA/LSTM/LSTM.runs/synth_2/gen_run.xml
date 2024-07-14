@@ -1,25 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7k160tfbg676-1" LaunchTime="1714233198">
-  <File Type="PA-TCL" Name="matrix_multiply_large.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="matrix_multiply_large_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="matrix_multiply_large_reports.tcl"/>
-  <File Type="RDS-RDS" Name="matrix_multiply_large.vds"/>
-  <File Type="RDS-UTIL" Name="matrix_multiply_large_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="matrix_multiply_large_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="matrix_multiply_large.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="matrix_multiply_large_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="matrix_multiply_large_timing_summary_synth.pb"/>
+<GenRun Id="synth_2" LaunchPart="xc7k160tfbg676-1" LaunchTime="1714815165">
+  <File Type="PA-TCL" Name="fixed_full_adder_32.tcl"/>
+  <File Type="REPORTS-TCL" Name="fixed_full_adder_32_reports.tcl"/>
+  <File Type="RDS-RDS" Name="fixed_full_adder_32.vds"/>
+  <File Type="RDS-UTIL" Name="fixed_full_adder_32_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="fixed_full_adder_32_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="fixed_full_adder_32.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/mux.v">
+    <File Path="$PSRCDIR/sources_1/new/fixed_point_adder.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/matrix_mutiply_large.v">
+    <File Path="$PSRCDIR/sources_1/new/fixed_full_adder_32.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/vector_dot_product.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/matrix_vector_multiplication.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,6 +49,14 @@
     <File Path="$PSRCDIR/sources_1/new/matrix_multiply.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/matrix_mutiply_large.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -99,7 +128,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="matrix_multiply_large"/>
+      <Option Name="TopModule" Val="fixed_full_adder_32"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -115,9 +144,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

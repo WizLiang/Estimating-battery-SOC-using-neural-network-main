@@ -2,11 +2,11 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat Apr 27 23:53:21 2024
-# Process ID: 17668
+# Start of session at: Sat May  4 17:32:50 2024
+# Process ID: 19428
 # Current directory: D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2
-# Command line: vivado.exe -log matrix_multiply_large.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrix_multiply_large.tcl
-# Log file: D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2/matrix_multiply_large.vds
+# Command line: vivado.exe -log fixed_full_adder_32.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fixed_full_adder_32.tcl
+# Log file: D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2/fixed_full_adder_32.vds
 # Journal file: D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.runs/synth_2\vivado.jou
 #-----------------------------------------------------------
-source matrix_multiply_large.tcl -notrace
+source fixed_full_adder_32.tcl -notrace

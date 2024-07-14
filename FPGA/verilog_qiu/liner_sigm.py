@@ -10,7 +10,7 @@ def sigmoid(x):
 def tanh(x):
     return np.tanh(x)
 
-y = [tanh(i) for i in x]
+y = [sigmoid(i) for i in x]
 f = interp1d(x, y,kind = 'linear')
 
 #
@@ -32,24 +32,25 @@ print(k_b)
 # k, b = np.split(k_b, 2, axis=1)
 # print(k)
 k,b = (zip(*k_b))
-#k=[round(k*512) for k in k]  #sigmoid
-k=[round(k*128) for k in k] #tanh
+k=[round(k*512) for k in k]  #sigmoid
+# k=[round(k*128) for k in k] #tanh
 # dec_num=round(k)
 print(k)
 k=[bin(k)[2:] for k in k]
 
 
 for i in range(len(k)):
-    print(f"assign romk[{i}] = 'b{k[i]};")
-
-#b=[round(b*256) for b in b] #sigmoid
-b=[round(b*128) for b in b] #tanh
+    #print(f"assign romk[{i}] = 'b{k[i]}';")
+    print(f"{k[i]},")
+    
+b=[round(b*256) for b in b] #sigmoid
+# b=[round(b*128) for b in b] #tanh
 print(b)
 b=[bin(b)[2:] for b in b]
 
 for i in range(len(b)):
-    print(f"assign romb[{i}] = 'b{b[i]};")
-
+    #print(f"assign romb[{i}] = 'b{b[i]}';")
+    print(f"{b[i]},")
 
 
 

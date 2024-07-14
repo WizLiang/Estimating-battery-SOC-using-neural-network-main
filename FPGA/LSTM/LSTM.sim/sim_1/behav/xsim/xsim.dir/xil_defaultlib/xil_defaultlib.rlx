@@ -3,7 +3,13 @@
 Nov  6 2019
 21:57:16
 D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/fixed_piont_adder_tb.v,1714813479,verilog,,,,fixed_point_adder_tb,,,,,,,,
 D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/matrix_multiply_tb.v,1714231821,verilog,,,,matrix_multiply_tb,,,,,,,,
-D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/mux_tb.v,1714124330,verilog,,,,mux_tb,,,,,,,,
+D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/matrix_vector_multiplication_tb.v,1714746726,verilog,,,,matrix_vector_multiplication_tb,,,,,,,,
+D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/mux_tb.v,1714294664,verilog,,,,mux_tb,,,,,,,,
+D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/vector_dot_product_tb.v,1714900329,verilog,,,,vector_dot_product_tb,,,,,,,,
+D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/fixed_point_adder.v,1714812950,verilog,,D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/fixed_piont_adder_tb.v,,fixed_point_adder,,,,,,,,
 D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_multiply.v,1714230227,verilog,,D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v,,matrix_multiply,,,,,,,,
-D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v,1714140411,verilog,,D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/matrix_multiply_tb.v,,mux,,,,,,,,
+D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/matrix_vector_multiplication.v,1714747854,verilog,,D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v,,matrix_vector_multiplication,,,,,,,,
+D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/mux.v,1714897527,verilog,,D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/vector_dot_product.v,,mux,,,,,,,,
+D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sources_1/new/vector_dot_product.v,1714898835,verilog,,D:/Desktop/Estimating-battery-SOC-using-neural-network-main/FPGA/LSTM/LSTM.srcs/sim_1/new/vector_dot_product_tb.v,,vector_dot_product,,,,,,,,
